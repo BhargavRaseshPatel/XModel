@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [displayForm, setDisplayForm] = useState(false)
+  const [displayForm, setDisplayForm] = useState(true)
   const [date, setDate] = useState('')
 
   const handleSubmit = (event) => {
@@ -34,13 +34,13 @@ function App() {
   };
 
   return (
-    <div className='modal'>
+    <div className='modal' onClick={() => setDisplayForm(false)}>
       <h1>User Details Modal</h1>
-      <button onClick={() => setDisplayForm(true)}>Open Form</button>
+      <button onClick={(e) => { e.stopPropagation(); setDisplayForm(true); }}>Open Form</button>
 
       {displayForm && (
         <div className="modal-form">
-          <div className="modal-content">
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
             <form onSubmit={handleSubmit}>
 

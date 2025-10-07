@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  height: 100vh;
 }
 
 /* Gray background overlay */
@@ -16,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 /* Centered form container */

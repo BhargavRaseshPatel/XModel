@@ -23,8 +23,9 @@ function App() {
 
   const handleDate = (e) => {
 
-    if(e.target.value > new Date.now()) {
-      alert("Invalid date of birth. Date of birth cannot be in the future.")
+    if (new Date(e.target.value).getTime() > Date.now()) {
+      alert("Invalid date of birth. Date of birth cannot be in the future.");
+      return;
     }
     const inputDate = e.target.value; // yyyy-mm-dd
     const [year, month, day] = inputDate.split("-");

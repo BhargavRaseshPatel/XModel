@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [displayForm, setDisplayForm] = useState(true)
+  const [displayForm, setDisplayForm] = useState(false)
   const [date, setDate] = useState('')
 
   const handleSubmit = (event) => {
